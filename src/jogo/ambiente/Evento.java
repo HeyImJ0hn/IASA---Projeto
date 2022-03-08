@@ -1,4 +1,4 @@
-package jogo.src.jogo.ambiente;
+package jogo.ambiente;
 
 /**
  * Enumerado com todo o tipo de eventos do ambiente existentes

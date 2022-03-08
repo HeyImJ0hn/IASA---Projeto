@@ -1,4 +1,4 @@
-package jogo.src.jogo.ambiente;
+package jogo.ambiente;
 
 public class Ambiente {
     Evento evento;

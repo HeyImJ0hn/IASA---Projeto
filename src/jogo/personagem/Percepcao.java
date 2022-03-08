@@ -1,6 +1,6 @@
-package jogo.src.jogo.personagem;
+package jogo.personagem;
 
-import jogo.src.jogo.ambiente.Evento;
+import jogo.ambiente.Evento;
 
 public class Percepcao {
     private Evento evento; // Evento perceptido pela personagem - entregue ao construtor na criação de uma

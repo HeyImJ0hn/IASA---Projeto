@@ -1,4 +1,4 @@
-package jogo.src.jogo.personagem;
+package jogo.personagem;
 
 /**
  * Enumerado com todas as accoes possíveis da personagem

@@ -1,6 +1,6 @@
-package jogo.src.jogo.personagem;
+package jogo.personagem;
 
-import jogo.src.jogo.ambiente.Ambiente;
+import jogo.ambiente.Ambiente;
 
 public class Personagem {
     private Controlo controlo = new Controlo(); // Controlo

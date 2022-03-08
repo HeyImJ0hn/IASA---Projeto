@@ -1,8 +1,8 @@
 package jogo;
 
-import jogo.src.jogo.ambiente.Ambiente;
-import jogo.src.jogo.ambiente.Evento;
-import jogo.src.jogo.personagem.Personagem;
+import jogo.ambiente.Ambiente;
+import jogo.ambiente.Evento;
+import jogo.personagem.Personagem;
 
 public class Jogo {
     // Instanciar as classes Ambiente e Personagem, entregando à personagem o
