@@ -4,7 +4,8 @@ public class Ambiente {
     Evento evento;
 
     /**
-     * Construtor
+     * Construtor da classe Ambiente - Corrido quando é instanciado um objeto da
+     * classe
      */
     public Ambiente() {
 

@@ -8,7 +8,8 @@ public class Percepcao {
 
     /**
      * Construtor da classe Percepcao.
-     * Recebe um argumento (Evento) e atribui o mesmo ao atributo global "evento"
+     * Recebe um argumento (Evento) e atribui o mesmo ao atributo global criado anteriormente "evento"
+     * 
      * @param evento
      */
     public Percepcao(Evento evento) {
@@ -17,6 +18,7 @@ public class Percepcao {
 
     /**
      * Retorna o atributo Evento da classe
+     * 
      * @return Evento
      */
     public Evento getEvento() {

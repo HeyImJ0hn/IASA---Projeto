@@ -3,9 +3,15 @@ package jogo.personagem;
 import jogo.ambiente.Ambiente;
 
 public class Personagem {
-    private Controlo controlo = new Controlo(); // Controlo
-    private Ambiente ambiente; // Atributo entregue pela classe Jogo na criação da Personagem
+    private Controlo controlo = new Controlo(); // Classe controlo permite processar a percepcao da personagem e retorna uma accao
+    private Ambiente ambiente; // Atributo entregue pela classe Jogo na criação da Personagem - Ambiente onde a personagem vai atuar
 
+    /**
+     * Recebe o ambiente onde está inserido como argumento e associa à variável
+     * criada anteriormente.
+     * 
+     * @param ambiente
+     */
     public Personagem(Ambiente ambiente) {
         this.ambiente = ambiente;
     }
@@ -23,9 +29,10 @@ public class Personagem {
     }
 
     /**
-     * Cria e retorna uma variável do tipo Percepcao dependendo do evento entregue
+     * Cria e retorna uma variável do tipo Percepcao dependendo do evento entregue.
+     * Permite percepcionar o que está em redor da personagem
      * 
-     * @return Percepcao percepcao
+     * @return Percepcao
      */
     private Percepcao percepcionar() {
         return new Percepcao(ambiente.getEvento());
