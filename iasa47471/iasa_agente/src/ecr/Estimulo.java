@@ -1,4 +1,4 @@
-package jogo.ecr;
+package ecr;
 
 import jogo.personagem.Percepcao;
 
