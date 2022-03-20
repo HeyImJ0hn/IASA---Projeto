@@ -1,0 +1,5 @@
+{
+    "java.project.sourcePaths": [
+        "iasa_jogo\\src", "iasa_agente\\src"
+    ]
+}
