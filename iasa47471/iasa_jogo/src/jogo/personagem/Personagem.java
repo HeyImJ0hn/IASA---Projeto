@@ -3,8 +3,12 @@ package jogo.personagem;
 import jogo.ambiente.Ambiente;
 
 public class Personagem {
-    private Controlo controlo = new Controlo(); // Classe controlo permite processar a percepcao da personagem e retorna uma accao
-    private Ambiente ambiente; // Atributo entregue pela classe Jogo na criação da Personagem - Ambiente onde a personagem vai atuar
+    // Classe controlo permite processar a percepcao da personagem e retorna uma
+    // accao
+    private Controlo controlo = new Controlo();
+    // Atributo entregue pela classe Jogo na criação da Personagem - Ambiente onde a
+    // personagem vai atuar
+    private Ambiente ambiente;
 
     /**
      * Recebe o ambiente onde está inserido como argumento e associa à variável
@@ -45,7 +49,8 @@ public class Personagem {
      * @param accao
      */
     private void actuar(Accao accao) {
-
+        if (accao != null)
+            System.out.printf("Accao: %s\n\n", accao);
     }
 
 }

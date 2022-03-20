@@ -10,10 +10,12 @@ import jogo.personagem.Personagem;
  */
 
 public class Jogo {
-    // Cria uma instancia da classe "Ambiente". É neste ambiente que a personagem vai atuar.
-    private static Ambiente ambiente = new Ambiente(); 
+    // Cria uma instancia da classe "Ambiente". É neste ambiente que a personagem
+    // vai atuar.
+    private static Ambiente ambiente = new Ambiente();
 
-    // Cria uma instancia da classe "Personagem", entregando o Ambiente onde a personagem vai atuar.
+    // Cria uma instancia da classe "Personagem", entregando o Ambiente onde a
+    // personagem vai atuar.
     private static Personagem personagem = new Personagem(ambiente);
 
     public static void main(String[] args) {
