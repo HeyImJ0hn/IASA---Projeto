@@ -3,15 +3,17 @@
 # estímulo.
 # Uma resposta é uma ação diretamente ativada em função das percepções.
 # As respostas a alterações no ambiente são rápidas,
-# e aos estímulos do ambiente são fixas e predefinidas
-
+# e aos estímulos do ambiente são fixas e predefinidas.
 class Resposta:
     def __init__(self, accao):
         self._accao = accao
 
-    # Quando é ativado, dependendo da intensidade, é retornada a ação referente à
-    # percepcao.
-    # Retorna uma variável do tipo Accao
-    def activar(self, percepcao, intensidade):
+    # Quando é ativado, é atualizada a prioridade da accao entregue
+    # no construtor da classe para o valor da intensidade entregue como
+    # parametro no método.
+    # Caso nao seja entregue nenhum valor de intensidade, o valor
+    # default é 0.
+    # Retorna a accao com a nova prioridade.
+    def activar(self, percepcao, intensidade=0):
         self._accao.prioridade = intensidade
         return self._accao

@@ -12,13 +12,28 @@ class ComportComp(IComportamento):
         self._comportamentos = comportamentos
 
     # Ativa uma accao a partir da percepcao recebida
-    # Retorna a accao ativada
-    def activar(percepcao):
-        # TODO
-        return None
+    # Retorna uma accao 
+    #
+    # É criada uma lista de accoes vazia no inicio do método.
+    # De seguida é percorrida a lista de comportamentos
+    # entregue na criação da instancia da classe e é guardada a ação
+    # retornada pelo método "activar" de cada comportamento.
+    # Caso a accao exista, é adicionada à lista de accoes criada
+    # inicialmente. No fim é corrido o método "seleccionar_accao" e retorna
+    # a accao selecionada conforme o método de seleccao usado.
+    def activar(self, percepcao):
+        accoes = []
+        for comp in self._comportamentos:
+            accao = comp.activar(percepcao)
+            if accao:
+                accoes.append(accao)
+        return self.seleccionar_accao(accoes)
 
     # Método abstrato
     # Seleciona uma accao da lista de accoes entregue
+    # através dos métodos de seleção "Hierarquia",
+    # "Prioridade" ou "Fusão" (não implementado)
+    # e retorna a accao selecionada
     @abstractmethod
     def seleccionar_accao(accoes):
         '''
@@ -26,3 +41,4 @@ class ComportComp(IComportamento):
         @param percepcao: lista de accoes
         @return: acção selecionada
         '''
+        pass
