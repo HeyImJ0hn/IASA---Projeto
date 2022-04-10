@@ -4,6 +4,8 @@ from ecr.Resposta import Resposta
 # Classe extende a classe Resposta
 # Esta classe permite mover o agente numa determinada direçao
 # através da sua superclasse "Resposta" e de accoes
+
+
 class RespostaMover(Resposta):
 
     # Construtor da classe

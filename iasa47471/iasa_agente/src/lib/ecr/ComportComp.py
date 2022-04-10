@@ -1,18 +1,20 @@
 from abc import ABC, abstractmethod
-import IComportamento
+from ecr.IComportamento import IComportamento
 
 # Esta classe representa um comportamento composto.
 # Um comportamento pode ser composto por outros comportamentos,
 # criado assim um comportamento composto.
 # Esta classe implementa a interface IComportamento
-class ComportComp(IComportamento):
+
+
+class ComportComp(IComportamento, ABC):
     # Construtor da classe ComportComp
     # Recebe uma lista de comportamentos
     def __init__(self, comportamentos):
         self._comportamentos = comportamentos
 
     # Ativa uma accao a partir da percepcao recebida
-    # Retorna uma accao 
+    # Retorna uma accao
     #
     # É criada uma lista de accoes vazia no inicio do método.
     # De seguida é percorrida a lista de comportamentos
@@ -25,7 +27,7 @@ class ComportComp(IComportamento):
         accoes = []
         for comp in self._comportamentos:
             accao = comp.activar(percepcao)
-            if accao:
+            if accao != None:
                 accoes.append(accao)
         return self.seleccionar_accao(accoes)
 
@@ -35,10 +37,9 @@ class ComportComp(IComportamento):
     # "Prioridade" ou "Fusão" (não implementado)
     # e retorna a accao selecionada
     @abstractmethod
-    def seleccionar_accao(accoes):
+    def seleccionar_accao(self, accoes):
         '''
         Selecionar accao
         @param percepcao: lista de accoes
         @return: acção selecionada
         '''
-        pass

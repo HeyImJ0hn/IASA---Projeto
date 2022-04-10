@@ -6,7 +6,7 @@
 # e aos estímulos do ambiente são fixas e predefinidas.
 class Resposta:
     def __init__(self, accao):
-        self._accao = accao
+        self.accao = accao
 
     # Quando é ativado, é atualizada a prioridade da accao entregue
     # no construtor da classe para o valor da intensidade entregue como
@@ -15,5 +15,5 @@ class Resposta:
     # default é 0.
     # Retorna a accao com a nova prioridade.
     def activar(self, percepcao, intensidade=0):
-        self._accao.prioridade = intensidade
-        return self._accao
+        self.accao.prioridade = intensidade
+        return self.accao
