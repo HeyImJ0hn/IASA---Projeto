@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from pee.mec_proc.No import No
+from pee.mec_proc.fronteira.FronteiraPrioridade import FronteiraPrioridade
 
 # Esta classe representa um mecanismo geral de procura.
 # Existem vários mecanismos de procura como a procura em profundidade,
@@ -13,11 +14,22 @@ from pee.mec_proc.No import No
 
 class MecanismoProcura(ABC):
     def __init__(self):
-        pass
+        self.fronteira = self._iniciar_fronteira()
 
-    def resolver(problema):
-        # Retorna solucao
-        return
+    def resolver(self, problema, f):
+        no = No(problema.estado_inicial)
+        fronteira = FronteiraPrioridade(f)
+        explorados = []
+
+        while not fronteira.vazia():
+            no = fronteira.remover()
+            if problema.objectivo(no.estado): return no
+            for child in self.expandir(problema, no):
+                s = child.estado
+                if s not in explorados or child.custo < explorados[s].custo:
+                    explorados[s] = child
+                    fronteira.inserir(child)
+        return "failure"
 
     @abstractmethod
     def _iniciar_fronteira():

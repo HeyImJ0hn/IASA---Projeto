@@ -10,7 +10,12 @@ class No:
         self.estado = estado
         self.operador = operador
         self.antecessor = antecessor
+        self.custo = 0
+        self.profunidade = 0
 
-    def __lt__(self, no):
-        # Retorna um boolean
-        return
+    @property
+    def custo(self):
+        return self.custo
+
+    def __it__(self, no):
+        return self.custo < no.custo

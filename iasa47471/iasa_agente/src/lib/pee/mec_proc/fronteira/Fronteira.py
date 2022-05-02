@@ -9,13 +9,16 @@ class Fronteira(ABC):
     def __init__(self):
         self.nos = [9]
 
-    def vazia():
-        # Retorna um boolean
-        return
+    # Verifica se a lista de nos está vazia
+    def vazia(self):
+        if not self.nos:
+            return True
+        return False
 
     @abstractmethod
     def inserir(no):
         pass
 
-    def remover():
-        return
+    # Remove o primeiro nó da lista de nós
+    def remover(self):
+        return self.nos.pop(0)

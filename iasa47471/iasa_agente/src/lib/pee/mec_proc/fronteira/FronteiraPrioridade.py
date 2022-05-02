@@ -1,5 +1,6 @@
-from pee.Fronteira import Fronteira
 from heapq import heappush, heappop
+
+from pee.mec_proc.fronteira.Fronteira import Fronteira
 
 # Representa um tipo de fronteira, Fronteira Prioridade.
 

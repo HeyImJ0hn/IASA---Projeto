@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from pee.mec_proc.ProcuraGrafo import ProcuraGrafo
+from pee.larg.ProcuraGrafo import ProcuraGrafo
 
 # Esta classe representa um mecanismo de procura melhor-primeiro (best-first).
 # Esta procura tira partido de uma avaliação do estado e utiliza a função f
