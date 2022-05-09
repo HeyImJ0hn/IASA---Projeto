@@ -8,8 +8,9 @@ class Solucao:
             self.percurso.insert(0, no)
             no = no.antecessor
 
-    def remover_passo():
-        return
+    # Remover o primeiro passo do percurso
+    def remover_passo(self):
+        self.percurso.pop(0)
 
     def __iter__(self):
         return iter(self.percurso)

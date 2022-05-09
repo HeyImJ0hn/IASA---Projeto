@@ -5,9 +5,10 @@ from abc import ABC, abstractmethod
 # relaçãode ordem e faz parte do mecanismo de procura.
 # O critério de ordenação determina a estratégia de controlo da procura.
 
+
 class Fronteira(ABC):
     def __init__(self):
-        self.nos = [9]
+        self.nos = []
 
     # Verifica se a lista de nos está vazia
     def vazia(self):

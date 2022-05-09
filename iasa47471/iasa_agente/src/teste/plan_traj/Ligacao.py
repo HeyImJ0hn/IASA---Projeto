@@ -1,6 +1,10 @@
 from dataclasses import dataclass
 
-# Dataclass de uma ligação
+# Esta classe é uma dataclass e tem como objetivo representar
+# uma ligação que vai desde a origem ao destino e comtém
+# também o seu respetivo custo.
+
+
 @dataclass
 class Ligacao:
     origem: str

@@ -6,16 +6,16 @@ class No:
     def __init__(self, estado):
         self.estado = estado
 
-    def __init__(self, estado, operador, antecessor):
+    def __init__(self, estado, operador=None, antecessor=None):
         self.estado = estado
         self.operador = operador
         self.antecessor = antecessor
-        self.custo = 0
+        self._custo = 0
         self.profunidade = 0
 
     @property
     def custo(self):
-        return self.custo
+        return self._custo
 
     def __it__(self, no):
-        return self.custo < no.custo
+        return self._custo < no._custo
