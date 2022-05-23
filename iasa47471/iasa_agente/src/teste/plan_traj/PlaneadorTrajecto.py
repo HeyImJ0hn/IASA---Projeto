@@ -1,3 +1,5 @@
+from pee.larg.ProcuraLarg import ProcuraLarg
+from pee.prof.ProcuraProf import ProcuraProf
 from pee.prof.ProcuraProfLim import ProcuraProfLim
 from teste.plan_traj.mod_prob.ProblemaPlanTraj import ProblemaPlanTraj
 
@@ -13,9 +15,12 @@ class PlaneadorTrajecto:
         # Retorna Solucao
         problema = ProblemaPlanTraj(ligacoes, loc_inicial, loc_final)
         # Inicializar um mecanismo de procura
-        procura = ProcuraProfLim()
-        return procura.resolver(problema)
+        #procura = ProcuraProf()
+        solucao = ProcuraProf().resolver(problema)
+        #return procura.resolver(problema)
+        return solucao
 
     def mostrar_trajecto(self, solucao):
-        for no in solucao:
+        print(solucao)
+        for no in solucao.percurso:
             print(no.estado.localidade)

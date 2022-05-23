@@ -11,7 +11,11 @@ class Estado(ABC):
         pass
 
     def __hash__(self):
-        return self.id_valor
+        return self.id_valor()
 
     def __eq__(self, other):
         return self.__hash__() == other.__hash__()
+
+    @property
+    def estado(self):
+        return self.estado

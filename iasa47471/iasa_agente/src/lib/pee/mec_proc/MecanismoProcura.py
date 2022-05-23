@@ -21,11 +21,11 @@ class MecanismoProcura(ABC):
         self._memorizar(no)
 
         while not self.fronteira.vazia():
+            print("boas")
             no_explorado = self.fronteira.remover()
-            print(no_explorado)
             if problema.objectivo(no_explorado.estado):
                 return Solucao(no_explorado)
-            for child in self.expandir(problema, no):
+            for child in self._expandir(problema, no_explorado):
                 self._memorizar(child)
         return "failure"
 
@@ -33,10 +33,10 @@ class MecanismoProcura(ABC):
     def _iniciar_fronteira():
         pass
 
-    def expandir(self, problema, no):
+    def _expandir(self, problema, no):
         for operador in problema.operadores:
             estado_suc = operador.aplicar(no.estado)
-            if (estado_suc):
+            if estado_suc:
                 yield No(estado_suc, operador, no)
 
     @abstractmethod

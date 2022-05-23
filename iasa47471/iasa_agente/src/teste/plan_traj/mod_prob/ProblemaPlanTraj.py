@@ -22,6 +22,6 @@ class ProblemaPlanTraj(Problema):
         super().__init__(EstadoLocalidade(loc_inicial), self.operadores)
 
     def objectivo(self, estado):
-        if estado.localidade == self.loc_final:
+        if estado == self.loc_final:
             return True
         return False

@@ -1,6 +1,7 @@
 
 from controlo_delib.OperadorMover import OperadorMover
 from mod.agente.EstadoAgente import EstadoAgente
+from plan.ModeloPlan import ModeloPlan
 from sae.ambiente.direccao import Direccao
 
 # Esta classe representa um modelo do mundo.
@@ -13,7 +14,7 @@ from sae.ambiente.direccao import Direccao
 # O estado corresponde ao estado atual do modelo.
 # A lista de estados contém todos os estados contidos no modelo.
 # A lista de operadores contém operadores do tipo OperadorMover para cada direção.
-class ModeloMundo():
+class ModeloMundo(ModeloPlan):
     def __init__(self):
         self._alterado = False
         self._elementos = {}

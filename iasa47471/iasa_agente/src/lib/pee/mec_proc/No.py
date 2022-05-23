@@ -3,19 +3,32 @@
 # Chamamos raiz ao nó correspondente ao estado inicial.
 
 class No:
-    def __init__(self, estado):
-        self.estado = estado
-
     def __init__(self, estado, operador=None, antecessor=None):
-        self.estado = estado
-        self.operador = operador
-        self.antecessor = antecessor
+        self._estado = estado
+        self._operador = operador
+        self._antecessor = antecessor
         self._custo = 0
-        self.profunidade = 0
+        self._profunidade = 0
 
     @property
     def custo(self):
         return self._custo
 
+    @property
+    def estado(self):
+        return self._estado
+
+    @property
+    def operador(self):
+        return self._operador
+    
+    @property
+    def antecessor(self):
+        return self._antecessor
+
+    @property
+    def profundidade(self):
+        return self._profunidade
+
     def __it__(self, no):
-        return self._custo < no._custo
+        return self._custo < no.custo()

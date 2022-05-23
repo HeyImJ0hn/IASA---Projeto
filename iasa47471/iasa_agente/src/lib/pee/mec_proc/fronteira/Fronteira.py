@@ -22,4 +22,7 @@ class Fronteira(ABC):
 
     # Remove o primeiro nó da lista de nós
     def remover(self):
-        return self.nos.pop(0)
+        no = self.nos[0]
+        self.nos.pop(0)
+        return no
+        #return self.nos.pop(0)

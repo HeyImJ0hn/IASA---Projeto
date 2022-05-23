@@ -15,7 +15,9 @@ class ProcuraGrafo(MecanismoProcura):
     def _memorizar(self, no):
         if self._manter(no):
             # adicionar aos explorados
-            self.explorados[no.estado] = no
+            self.explorados[no.estado.localidade] = no
+            self.fronteira.inserir(no)
+
 
     def _manter(self, no):
         if no not in self.explorados:

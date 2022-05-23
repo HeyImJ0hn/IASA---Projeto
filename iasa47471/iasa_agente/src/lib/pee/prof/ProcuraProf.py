@@ -8,7 +8,8 @@ from pee.mec_proc.fronteira.FronteiraLIFO import FronteiraLIFO
 
 class ProcuraProf(MecanismoProcura):
     def _iniciar_fronteira(self):
-        return FronteiraLIFO()
+        self.fronteira = FronteiraLIFO()
+        return self.fronteira
 
     def _memorizar(self, no):
         self.fronteira.inserir(no)
