@@ -1,4 +1,4 @@
-from pee.melhor_prim.AvalCustoUnif import AvalCustoUnif
+from pee.aval.AvalCustoUnif import AvalCustoUnif
 from pee.melhor_prim.ProcuraMelhorPrim import ProcuraMelhorPrim
 
 # Procura de Custo Uniforme é um mecanismo de procura. Extende a classe procura Melhor-Primeiro.

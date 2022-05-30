@@ -1,4 +1,5 @@
 from multiprocessing.spawn import import_main_path
+from pee.inf.ProcuraInformada import ProcuraInformada
 from pee.melhor_prim.ProcuraCustoUnif import ProcuraCustoUnif
 from plan.Planeador import Planeador
 from plan_pee.HeurDist import HeurDist
@@ -10,7 +11,7 @@ from plan_pee.ProblemaPlan import ProblemaPlan
 # Vai criar e gerir um plano de acordo com a procura em espaços de estados.
 class PlanPEE(Planeador):
     def __init__(self):
-        self._mec_pee = ProcuraCustoUnif()
+        self._mec_pee = ProcuraInformada()
 
     # Gera um plano internamente
     def planear(self, modelo_plan, objetivos):

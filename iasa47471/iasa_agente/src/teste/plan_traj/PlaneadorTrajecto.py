@@ -21,6 +21,5 @@ class PlaneadorTrajecto:
         return solucao
 
     def mostrar_trajecto(self, solucao):
-        print(solucao)
         for no in solucao.percurso:
             print(no.estado.localidade)

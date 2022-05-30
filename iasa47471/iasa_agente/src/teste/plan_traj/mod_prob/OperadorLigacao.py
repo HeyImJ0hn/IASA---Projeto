@@ -2,10 +2,13 @@
 # Representa também uma ação
 # Gera uma transformação de estado através do método aplicar.
 
+from teste.plan_traj.mod_prob.EstadoLocalidade import EstadoLocalidade
+
+
 class OperadorLigacao:
     def __init__(self, origem, destino, custo):
-        self.origem = origem
-        self.destino = destino
+        self.origem = EstadoLocalidade(origem)
+        self.destino = EstadoLocalidade(destino)
         self._custo = custo
 
     def aplicar(self, estado):

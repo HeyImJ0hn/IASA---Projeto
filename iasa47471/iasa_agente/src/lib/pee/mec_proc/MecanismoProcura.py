@@ -11,7 +11,6 @@ from pee.mec_proc.No import No
 # estrutura de dados com relação de ordem, em que o critériode ordenação determina
 # a estratégia de controlo da procura.
 
-
 class MecanismoProcura(ABC):
     def __init__(self):
         self.fronteira = self._iniciar_fronteira()
@@ -21,7 +20,6 @@ class MecanismoProcura(ABC):
         self._memorizar(no)
 
         while not self.fronteira.vazia():
-            print("boas")
             no_explorado = self.fronteira.remover()
             if problema.objectivo(no_explorado.estado):
                 return Solucao(no_explorado)

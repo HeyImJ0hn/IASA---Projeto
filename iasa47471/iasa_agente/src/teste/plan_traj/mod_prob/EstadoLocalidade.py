@@ -13,4 +13,4 @@ class EstadoLocalidade(Estado):
         return self._localidade
 
     def id_valor(self):
-        return self.localidade.__hash__()
+        return self._localidade.__hash__()

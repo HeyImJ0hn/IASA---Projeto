@@ -19,5 +19,5 @@ class ProcuraMelhorPrim(ProcuraGrafo):
         return super()._manter()
 
     @abstractmethod
-    def iniciar_avaliador():
+    def _iniciar_avaliador():
         pass
